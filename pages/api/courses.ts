@@ -7,18 +7,42 @@ type Course = {
   coursePrice: string;
 };
 
-var courses: Course[] = [
+export var courses: Course[] = [
   {
     courseId: '1',
     courseImageUrl: '',
     courseTitle: 'React course',
-    coursePrice: '123',
+    coursePrice: '199',
   },
   {
     courseId: '2',
     courseImageUrl: '',
     courseTitle: 'Math course',
-    coursePrice: '123',
+    coursePrice: '129',
+  },
+  {
+    courseId: '3',
+    courseImageUrl: '',
+    courseTitle: 'Learn HTML',
+    coursePrice: '99',
+  },
+  {
+    courseId: '4',
+    courseImageUrl: '',
+    courseTitle: 'Foundational physics',
+    coursePrice: '149',
+  },
+  {
+    courseId: '5',
+    courseImageUrl: '',
+    courseTitle: 'Math for 5 year olds',
+    coursePrice: '229',
+  },
+  {
+    courseId: '6',
+    courseImageUrl: '',
+    courseTitle: 'Earth Sciences',
+    coursePrice: '299',
   },
 ];
 

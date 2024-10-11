@@ -1,8 +1,9 @@
-import { Box, Button, Card, TextField } from "@mui/material";
+import { Box, Button, Card, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import { NEXT_URL } from "./config";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useRouter } from "next/router";
+import { pink } from "@mui/material/colors";
 
 type Inputs = {
     username: string;
@@ -37,7 +38,8 @@ export default function Signup(){
         }}>
             <form onSubmit={handleSubmit(signIn)}>
             <TextField size="small" label="username" variant="outlined" type="text" {...register("username",{required: true})}></TextField>
-            <TextField size="small" label="password" variant="outlined" {...register("password",{required: true})}></TextField>
+            <TextField size="small" label="password" variant="outlined" {...register("password",{required: true, minLength: 6})}></TextField>
+            {errors.password && <Typography sx={{ color: pink[50]}}>Password should be minimum 6 characters</Typography>}
             <Button sx={{ width: '40%', margin: 'auto'}} type="submit" variant="contained">Sign up</Button>
             </form>
         </Card>
